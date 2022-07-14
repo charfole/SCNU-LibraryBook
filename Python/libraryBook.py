@@ -11,7 +11,7 @@ import json
 
 # 获取后天的日期，如果想预约明天的研讨室，下面要改成datetime.timedelta(days=1))
 today = datetime.date.today()
-houtian = str(today + datetime.timedelta(days=0))
+houtian = str(today + datetime.timedelta(days=2))
 
 # 下面是请求用到的常量
 userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"

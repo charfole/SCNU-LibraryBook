@@ -18,7 +18,7 @@ var userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (K
 var url = "http://lib-ic.scnu.edu.cn/ClientWeb/pro/ajax/login.aspx"
 
 // 获取后天的日期，如果想预约明天的研讨室，下面要改成AddDate(0, 0 ,1)
-var date = time.Now().AddDate(0, 0, 1).String()
+var date = time.Now().AddDate(0, 0, 2).String()
 var houtian = strings.Fields(date)[0]
 
 // 分早中晚时段，分别存放预约用到的链接
