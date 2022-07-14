@@ -16,18 +16,18 @@ git clone https://github.com/charfole/SCNU-LibraryBook.git
 **Golang 版本**
 
 ```
-# 1. 修改日期，预约明天的研讨室，下面要改成AddDate(0, 0 ,1)，当天则改成AddDate(0, 0 ,0)
+# 1.修改日期，预约明天的研讨室，下面要改成AddDate(0, 0 ,1)，当天则改成AddDate(0, 0 ,0)
 var date = time.Now().AddDate(0, 0, 2).String()
 
-# 2. 主函数中，填入三个预约人的图书馆研讨室系统的账户和密码
+# 2.主函数中，填入三个预约人的图书馆研讨室系统的账户和密码
 var usr1, SessionOne = login("账户1", "密码1")
 var usr2, SessionTwo = login("账户2", "密码2")
 var usr3, SessionThree = login("账户3", "密码3")
 
-# 3. 主函数中，填入预约早中晚研讨室的时间（以下的链接对应为：早上08：30-11：30，下午14：00-17：30，晚上19：00-21：30）
+# 3.主函数中，填入预约早中晚研讨室的时间（以下的链接对应为：早上08：30-11：30，下午14：00-17：30，晚上19：00-21：30）
 MorningSlice, AfternoonSlice, NightSlice = getBookLinks(usr1, usr2, usr3, "0830", "1130", "1400", "1730", "1900", "2130")
 
-# 4. 主函数中，下面三个值分别对应早中晚研讨室的预约状态，1为需要预约，0为不需要
+# 4.主函数中，下面三个值分别对应早中晚研讨室的预约状态，1为需要预约，0为不需要
 var morningBook int = 1
 var afternoonBook int = 1
 var nightBook int = 1
@@ -36,18 +36,18 @@ var nightBook int = 1
 **Python 版本**
 
 ```
-# 1. 修改日期，预约明天的研讨室，下面要改成datetime.timedelta(days=1)，当天则改成datetime.timedelta(days=0)
+# 1.修改日期，预约明天的研讨室，下面要改成datetime.timedelta(days=1)，当天则改成datetime.timedelta(days=0)
 houtian = str(today + datetime.timedelta(days=2))
 
-# 2. 主函数中，填入三个预约人的图书馆研讨室系统的账户和密码
+# 2.主函数中，填入三个预约人的图书馆研讨室系统的账户和密码
 user1, FirstBookSession = LibraryLogin("账户1", "密码1")
 user2, SecondBookSession = LibraryLogin("账户2", "密码2")
 user3, ThirdBookSession = LibraryLogin("账户3", "密码3")
 
-# 3. 主函数中，填入预约早中晚研讨室的时间（以下的链接对应为：早上08：30-11：30，下午14：00-17：30，晚上19：00-21：30）
+# 3.主函数中，填入预约早中晚研讨室的时间（以下的链接对应为：早上08：30-11：30，下午14：00-17：30，晚上19：00-21：30）
 urlMorning, urlAfternoon, urlNight = getBookLinks(user1, user2, user3, "0830", "1130", "1400", "1700", "1900", "2130")
 
-# 4. 主函数中，下面三个值分别对应早中晚研讨室的预约状态，1为需要预约，0为不需要
+# 4.主函数中，下面三个值分别对应早中晚研讨室的预约状态，1为需要预约，0为不需要
 morningBook, afternoonBook, nightBook = 1, 1, 1
 ```
 
